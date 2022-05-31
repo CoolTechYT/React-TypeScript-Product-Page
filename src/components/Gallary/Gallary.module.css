@@ -1,0 +1,26 @@
+.gallary {
+    width: calc(50% - 64px);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-image {
+    background: #1d1c1c;
+    width: 80%;
+    height: 300px;
+}
+
+.image-options {
+    width: 80%;
+    display: flex;
+    gap: 24px;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+.image-options .image {
+    width: 72px;
+    height: 72px;
+    background: #1d1c1c;
+}

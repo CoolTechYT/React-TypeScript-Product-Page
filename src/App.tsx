@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import styles from './App.module.css';
+import Gallary from './components/Gallary/Gallary';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles['product-page-wrapper']}>
+      <Navbar />
+      <section className={styles['product-details']}>
+        <Gallary />
+        <ProductDetails />
+      </section>
     </div>
-  );
+  )
 }
 
 export default App;
