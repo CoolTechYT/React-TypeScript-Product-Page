@@ -6,21 +6,32 @@
 }
 
 .main-image {
-    background: #1d1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     height: 300px;
+}
+
+.main-image img {
+    height: 100%;
 }
 
 .image-options {
     width: 80%;
     display: flex;
     gap: 24px;
-    overflow-x: hidden;
     justify-content: center;
 }
 
 .image-options .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 72px;
     height: 72px;
-    background: #1d1c1c;
+}
+
+.image-options .image img {
+    width: 100%;
 }

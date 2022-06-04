@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Gallary.module.css';
 
-const Gallary: React.FC = () => {
+interface GallaryProps {
+  images: string[];
+}
+
+const Gallary: React.FC<GallaryProps> = ({ images }) => {
+  const [mainImage, setMainImage] = useState<string>(images[0]);
+
   return (
     <div className={styles['gallary']}>
-        <div className={styles['main-image']}>
-
-        </div>
-        <div className={styles['image-options']}>
-            <div className={styles['image']} />
-            <div className={styles['image']} />
-            <div className={styles['image']} />
-            <div className={styles['image']} />
-            <div className={styles['image']} />
-        </div>
+      <div className={styles['main-image']}>
+        <img src={mainImage} />
+      </div>
+      <div className={styles['image-options']}>
+        {images.map(file => (
+          <div className={styles['image']}>
+            <img src={file} />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
